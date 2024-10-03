@@ -1,13 +1,8 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #414042;
+  --foreground: #fff;
+  --primary: #cbe5c0;
+  --active: #ffe49c;
 }
 
 html,
@@ -22,6 +17,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 1rem;
 }
 
 * {
@@ -31,12 +27,13 @@ body {
 }
 
 a {
+  
+  transition: all 0.3s ease;
   color: inherit;
   text-decoration: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+a:hover {
+  color: var(--primary);
+  text-shadow: 1px 1px 3px #000, 0px 0px 8px var(--active);
 }
