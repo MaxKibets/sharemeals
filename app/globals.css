@@ -3,6 +3,9 @@
   --foreground: #fff;
   --primary: #cbe5c0;
   --active: #ffe49c;
+  --danger: #ff7876;
+  --shadow: 0px 0px 2px #000, 0px 0px 6px rgba(255, 228, 156, 0.8);
+  --border: 3px solid var(--background);
 }
 
 html,
@@ -17,7 +20,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 1rem;
+  padding: 1rem 2rem;
 }
 
 * {
@@ -27,13 +30,21 @@ body {
 }
 
 a {
-  
+  display: inline-block;
   transition: all 0.3s ease;
-  color: inherit;
+  color: var(--primary);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--primary);
-  text-shadow: 1px 1px 3px #000, 0px 0px 8px var(--active);
+  text-shadow: var(--shadow);
+  transform: scale(1.05);
+}
+
+h1, h2 {
+  margin-bottom: 1rem;  
+}
+
+p {
+  margin-bottom: 1rem;
 }

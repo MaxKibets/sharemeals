@@ -1,0 +1,46 @@
+.header {
+  gap: 3rem;
+  margin: 3rem auto 5rem auto;
+  width: 90%;
+  max-width: 75rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.highlight {
+  color: var(--active);
+}
+
+.main {
+  width: 90%;
+  max-width: 60rem;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.perks {
+  display: flex;
+  list-style: none;
+  margin: 3rem 0;
+  padding: 0;
+  gap: 6rem;
+}
+
+.perks li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.perks img {
+  width: 8rem;
+  height: 8rem;
+  object-fit: contain;
+  background-color: var(--primary);
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  border: var(--border)
+}

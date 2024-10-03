@@ -1,0 +1,47 @@
+.header {
+  display: flex;
+  gap: 5rem;
+  align-items: center;
+  margin: 5rem auto;
+  width: 90%;
+  max-width: 75rem;
+}
+
+.sliderWrap {
+  width: 40rem;
+  height: 25rem;
+}
+
+.sliderWrap,
+.heroWrap {
+  flex: 1;
+}
+
+.hero {
+  font-size: 1.5rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.cta {
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  gap: 2rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  max-width: 50rem;
+  width: 90%;
+  margin: 2rem auto;
+  text-align: center;
+}
