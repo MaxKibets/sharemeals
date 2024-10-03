@@ -4,8 +4,9 @@
   --primary: #cbe5c0;
   --active: #ffe49c;
   --danger: #ff7876;
-  --shadow: 0px 0px 2px #000, 0px 0px 6px rgba(255, 228, 156, 0.8);
-  --border: 3px solid var(--background);
+  --shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  --border: 3px solid var(--primary);
+  --scale: 1.1;
 }
 
 html,
@@ -38,7 +39,7 @@ a {
 
 a:hover {
   text-shadow: var(--shadow);
-  transform: scale(1.05);
+  transform: scale(var(--scale));
 }
 
 h1, h2 {

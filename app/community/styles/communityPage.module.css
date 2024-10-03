@@ -39,8 +39,8 @@
   width: 8rem;
   height: 8rem;
   object-fit: contain;
-  background-color: var(--primary);
+  background-color: var(--active);
   border-radius: 50%;
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow), inset var(--shadow);
   border: var(--border)
 }
