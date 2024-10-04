@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 import { Button, Section } from "@/components/ui";
-import HomePageSlider from "@/components/homePageSlider/homePageSlider";
+import HomePageSlider from "@/components/homePageSlider/HomePageSlider";
 
 import css from "./page.module.css";
 

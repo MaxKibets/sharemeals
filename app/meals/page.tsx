@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Button, Mark, Section } from "@/components/ui";
-import MealsList from "@/components/mealsList/mealsList";
+import MealsList from "@/components/mealsList/HealsList";
 import { getMeals } from "@/lib/meals";
 
 const MealsPage: React.FC = async () => {
