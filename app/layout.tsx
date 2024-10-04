@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Fredoka } from "next/font/google";
 
-import Header from "@/components/header/header";
+import Header from "@/components/header/Header";
 
 import "./globals.css";
 
