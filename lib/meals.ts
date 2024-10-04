@@ -1,6 +1,6 @@
 import db from "better-sqlite3";
 
-import { MealProps } from "@/components/mealsList/meal";
+import { MealProps } from "@/components/mealsList/Meal";
 
 const mealsDB = db("meals.db");
 

@@ -8,7 +8,7 @@ import pizzaImg from "@/public/pizza.jpg";
 import schnitzelImg from "@/public/schnitzel.jpg";
 import tomatoSaladImg from "@/public/tomato-salad.jpg";
 
-import Slider from "../slider/slider";
+import Slider from "../slider/Slider";
 
 const images = [
   { image: burgerImg, alt: "A delicious, juicy burger" },

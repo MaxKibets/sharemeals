@@ -1,6 +1,6 @@
 import React from "react";
 
-import Meal, { MealProps } from "./meal";
+import Meal, { MealProps } from "./Meal";
 import css from "./styles/mealsList.module.css";
 
 type MealsListProps = {
