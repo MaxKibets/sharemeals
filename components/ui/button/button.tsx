@@ -4,7 +4,7 @@ import Link from "next/link";
 import css from "./styles/button.module.css";
 
 type ButtonProps = {
-  href: string;
+  href?: string;
   children: React.ReactNode;
 };
 

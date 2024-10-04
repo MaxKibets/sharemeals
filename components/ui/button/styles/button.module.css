@@ -6,13 +6,14 @@
   border: 2px solid var(--primary);
   background-color: var(--primary);
   color: var(--background);
-  border-radius: 1rem;
+  border-radius: var(--border-radius);
   cursor: pointer;
   transition: all 0.3s;
+  text-shadow: none;
+  box-shadow: var(--shadow);
+  font-size: inherit;
 }
 
 .button:hover {
-  text-shadow: none;
   transform: scale(var(--scale));
-  box-shadow: var(--shadow);
 }

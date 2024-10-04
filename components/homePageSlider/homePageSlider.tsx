@@ -1,12 +1,12 @@
 import React from "react";
 
-import burgerImg from "@/assets/burger.jpg";
-import curryImg from "@/assets/curry.jpg";
-import dumplingsImg from "@/assets/dumplings.jpg";
-import macncheeseImg from "@/assets/macncheese.jpg";
-import pizzaImg from "@/assets/pizza.jpg";
-import schnitzelImg from "@/assets/schnitzel.jpg";
-import tomatoSaladImg from "@/assets/tomato-salad.jpg";
+import burgerImg from "@/public/burger.jpg";
+import curryImg from "@/public/curry.jpg";
+import dumplingsImg from "@/public/dumplings.jpg";
+import macncheeseImg from "@/public/macncheese.jpg";
+import pizzaImg from "@/public/pizza.jpg";
+import schnitzelImg from "@/public/schnitzel.jpg";
+import tomatoSaladImg from "@/public/tomato-salad.jpg";
 
 import Slider from "../slider/slider";
 

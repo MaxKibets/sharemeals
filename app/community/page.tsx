@@ -1,21 +1,22 @@
 import React from "react";
 import Image from "next/image";
 
-import mealIcon from "@/assets/icons/meal.png";
-import communityIcon from "@/assets/icons/community.png";
-import eventsIcon from "@/assets/icons/events.png";
+import mealIcon from "@/public/icons/meal.png";
+import communityIcon from "@/public/icons/community.png";
+import eventsIcon from "@/public/icons/events.png";
+import { Mark, Section } from "@/components/ui";
 
 import css from "./styles/communityPage.module.css";
 
 const CommunityPage: React.FC = () => {
   return (
     <>
-      <header className={css.header}>
+      <Section marginLg centered>
         <h1>
-          One shared passion: <span className={css.highlight}>Food</span>
+          One shared passion: <Mark>Food</Mark>
         </h1>
         <p>Join our community and share your favorite recipes!</p>
-      </header>
+      </Section>
       <main className={css.main}>
         <h2>Community Perks</h2>
 

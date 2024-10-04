@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Button } from "@/components/ui";
+import { Button, Section } from "@/components/ui";
 import HomePageSlider from "@/components/homePageSlider/homePageSlider";
 
 import css from "./page.module.css";
@@ -8,7 +8,7 @@ import css from "./page.module.css";
 export default function Home() {
   return (
     <>
-      <header className={css.header}>
+      <Section marginLg className={css.topSection}>
         <div className={css.sliderWrap}>
           <HomePageSlider />
         </div>
@@ -24,9 +24,9 @@ export default function Home() {
             <Button href="/meals">Explore Meals</Button>
           </div>
         </div>
-      </header>
+      </Section>
       <main>
-        <section className={css.section}>
+        <Section centered>
           <h2>How it works</h2>
           <p>
             ShareMeal is a platform for foodies to share their favorite recipes
@@ -37,9 +37,8 @@ export default function Home() {
             ShareMeal is a place to discover new dishes, and to connect with
             other food lovers.
           </p>
-        </section>
-
-        <section className={css.section}>
+        </Section>
+        <Section centered>
           <h2>Why ShareMeal?</h2>
           <p>
             ShareMeal is a platform for foodies to share their favorite recipes
@@ -50,7 +49,7 @@ export default function Home() {
             ShareMeal is a place to discover new dishes, and to connect with
             other food lovers.
           </p>
-        </section>
+        </Section>
       </main>
     </>
   );
