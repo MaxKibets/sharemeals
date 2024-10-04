@@ -2,3 +2,8 @@
   color: var(--active);
   background-color: transparent;
 }
+
+.danger {
+  color: var(--danger);
+  background-color: transparent;
+}

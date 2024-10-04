@@ -1,0 +1,35 @@
+.loader {
+  font-size: 4rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+  text-align: center;
+  background: linear-gradient(
+    to right,
+    var(--primary) 0%,
+    var(--active) 25%,
+    var(--danger) 50%,
+    var(--background) 80%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-fill-color: transparent;
+  background-size: 500% auto;
+  animation: textShine 1s ease-in-out infinite alternate;
+}
+
+@keyframes textShine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+.fixed {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

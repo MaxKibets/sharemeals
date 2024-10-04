@@ -1,13 +1,13 @@
 import React from "react";
 
-import Meal, { MealProps } from "./Meal";
+import { getMeals } from "@/lib/meals";
+
+import Meal from "./Meal";
 import css from "./styles/mealsList.module.css";
 
-type MealsListProps = {
-  meals: MealProps[];
-};
+const MealsList: React.FC = async () => {
+  const meals = await getMeals();
 
-const MealsList: React.FC<MealsListProps> = ({ meals }) => {
   return (
     <ul className={css.meals}>
       {meals.map((meal) => (

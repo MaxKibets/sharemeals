@@ -1,5 +1,7 @@
 import React from "react";
 
+import MealDetailsPageContent from "@/components/mealDetailsPageContent/MealDetailsPageContent";
+
 type MealDetailsPageProps = {
   params: {
     slug: string;
@@ -7,7 +9,7 @@ type MealDetailsPageProps = {
 };
 
 const MealDetailsPage: React.FC<MealDetailsPageProps> = ({ params }) => {
-  return <h2>Meal Details {params.slug}</h2>;
+  return <MealDetailsPageContent slug={params.slug} />;
 };
 
 export default MealDetailsPage;

@@ -1,12 +1,9 @@
-import React from "react";
+import React, { Suspense } from "react";
 
-import { Button, Mark, Section } from "@/components/ui";
+import { Button, Loader, Mark, Section } from "@/components/ui";
 import MealsList from "@/components/mealsList/MealsList";
-import { getMeals } from "@/lib/meals";
 
 const MealsPage: React.FC = async () => {
-  const meals = await getMeals();
-
   return (
     <>
       <Section marginLg centered>
@@ -21,7 +18,9 @@ const MealsPage: React.FC = async () => {
         </p>
       </Section>
       <main>
-        <MealsList meals={meals} />
+        <Suspense fallback={<Loader />}>
+          <MealsList />
+        </Suspense>
       </main>
     </>
   );
