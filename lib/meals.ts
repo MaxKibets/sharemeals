@@ -1,6 +1,16 @@
+import { StaticImageData } from "next/image";
 import db from "better-sqlite3";
 
-import { MealProps } from "@/components/mealsList/Meal";
+export type MealProps = {
+  id: string;
+  slug: string;
+  title: string;
+  image: StaticImageData;
+  summary: string;
+  creator: string;
+  instructions: string;
+  creator_email: string;
+};
 
 const mealsDB = db("meals.db");
 

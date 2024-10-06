@@ -17,9 +17,8 @@ const CommunityPageContent: React.FC = () => {
         </h1>
         <p>Join our community and share your favorite recipes!</p>
       </Section>
-      <main className={css.main}>
+      <Section centered className={css.perksWrap}>
         <h2>Community Perks</h2>
-
         <ul className={css.perks}>
           <li>
             <Image src={mealIcon} alt="A delicious meal" />
@@ -37,7 +36,7 @@ const CommunityPageContent: React.FC = () => {
             <p>Participate in exclusive events</p>
           </li>
         </ul>
-      </main>
+      </Section>
     </>
   );
 };

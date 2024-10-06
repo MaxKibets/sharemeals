@@ -1,7 +1,9 @@
 import React from "react";
 
+import SharePageContent from "@/components/sharePageContent/SharePageContent";
+
 const SharePage: React.FC = () => {
-  return <h2>Share page</h2>;
+  return <SharePageContent />;
 };
 
 export default SharePage;

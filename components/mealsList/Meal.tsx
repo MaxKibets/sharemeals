@@ -1,17 +1,10 @@
-import Image, { StaticImageData } from "next/image";
-
-import css from "./styles/meal.module.css";
-import { Button } from "../ui";
+import Image from "next/image";
 import Link from "next/link";
 
-export type MealProps = {
-  id: string;
-  slug: string;
-  title: string;
-  image: StaticImageData;
-  summary: string;
-  creator: string;
-};
+import { MealProps } from "@/lib/meals";
+
+import css from "./styles/meal.module.css";
+import { Button, Card, Mark } from "../ui";
 
 const Meal: React.FC<MealProps> = ({
   title,
@@ -22,15 +15,17 @@ const Meal: React.FC<MealProps> = ({
 }) => {
   return (
     <div className={css.meal}>
-      <figure className={css.imageWrap}>
-        <Link href={`/meals/${slug}`}>
-          <Image src={`/${image}`} alt={title} fill />
-        </Link>
-        <figcaption className={css.captionWrap}>
-          <h2 className={css.caption}>{title}</h2>
-          <sub className={css.creator}>by {creator}</sub>
-        </figcaption>
-      </figure>
+      <Card>
+        <figure className={css.imageWrap}>
+          <Link href={`/meals/${slug}`}>
+            <Image src={`/${image}`} alt={title} fill sizes="100%" />
+          </Link>
+          <figcaption className={css.captionWrap}>
+            <h2 className={css.caption}>{title}</h2>
+            <Mark className={css.creator}>by {creator}</Mark>
+          </figcaption>
+        </figure>
+      </Card>
       <p className={css.summary}>{summary}</p>
       <Button>View Details</Button>
     </div>

@@ -17,9 +17,9 @@ body {
 }
 
 body {
+  line-height: 1.2;
   color: var(--foreground);
   background: var(--background);
-  font-size: 14px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   padding: 1rem 2rem;
@@ -50,4 +50,9 @@ h1, h2 {
 
 p {
   margin-bottom: 1rem;
+}
+
+.main {
+  max-width: 1440px;
+  margin: 0 auto;
 }

@@ -1,0 +1,19 @@
+.form {
+  max-width: 40rem;
+  margin: auto;
+}
+
+.row {
+  display: flex;
+}
+
+.fieldWrap {
+  width: 100%;
+}
+
+.fieldWrap:first-child {
+  margin-right: 1rem;
+}
+.fieldWrap:last-child {
+  margin-left: 1rem;
+}

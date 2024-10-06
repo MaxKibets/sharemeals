@@ -1,17 +1,12 @@
 .topSection {
-  display: flex;
-  gap: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(47%, 1fr));
+  grid-gap: 3rem;
   align-items: center;
 }
 
 .sliderWrap {
-  width: 40rem;
   height: 25rem;
-}
-
-.sliderWrap,
-.heroWrap {
-  flex: 1;
 }
 
 .hero {

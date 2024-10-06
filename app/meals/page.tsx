@@ -17,11 +17,9 @@ const MealsPage: React.FC = async () => {
           <Button href="/meals/share">Share Your Favorite Recipe</Button>
         </p>
       </Section>
-      <main>
-        <Suspense fallback={<Loader />}>
-          <MealsList />
-        </Suspense>
-      </main>
+      <Suspense fallback={<Loader />}>
+        <MealsList />
+      </Suspense>
     </>
   );
 };

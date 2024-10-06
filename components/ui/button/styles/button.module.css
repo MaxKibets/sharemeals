@@ -12,6 +12,7 @@
   text-shadow: none;
   box-shadow: var(--shadow);
   font-size: inherit;
+  line-height: inherit;
 }
 
 .button:hover {
