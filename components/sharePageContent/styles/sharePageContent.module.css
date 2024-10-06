@@ -17,3 +17,9 @@
 .fieldWrap:last-child {
   margin-left: 1rem;
 }
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}

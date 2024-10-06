@@ -1,10 +1,12 @@
 :root {
+  --alpha: 0.6;
+  --white: 255, 255, 255;
   --background: #414042;
-  --foreground: #fff;
+  --foreground: rgb(var(--white));
   --primary: #cbe5c0;
   --active: #ffe49c;
   --danger: #ff7876;
-  --shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
+  --shadow: 0px 0px 10px rgba(0, 0, 0, var(--alpha));
   --border: 3px solid var(--primary);
   --border-radius: 1rem;
   --scale: 1.1;

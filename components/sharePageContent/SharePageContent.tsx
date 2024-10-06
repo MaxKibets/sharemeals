@@ -2,6 +2,7 @@ import React from "react";
 
 import { Button, Input, Label, Mark, Section, Textarea } from "../ui";
 import css from "./styles/sharePageContent.module.css";
+import ImagePicker from "../imagePicker/ImagePicker";
 
 const SharePageContent: React.FC = () => {
   return (
@@ -41,7 +42,7 @@ const SharePageContent: React.FC = () => {
               required
             />
           </div>
-          IMAGE PICKER
+          <ImagePicker />
           <div className={css.actions}>
             <Button type="submit">Share Meal</Button>
           </div>

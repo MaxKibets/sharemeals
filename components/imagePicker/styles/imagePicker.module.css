@@ -1,0 +1,26 @@
+.wrap {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+.input {
+  display: none;
+}
+
+.picker {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 7rem;
+  height: 7rem;
+  padding: 0.5rem; 
+  font-size: 0.8rem;
+  text-align: center;
+  color: rgba(var(--white), var(--alpha));
+}
+
+.image {
+  object-fit: cover;
+}

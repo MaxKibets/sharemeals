@@ -4,8 +4,6 @@
   text-align: center;
   text-transform: uppercase;
   border: 2px solid var(--primary);
-  background-color: var(--primary);
-  color: var(--background);
   border-radius: var(--border-radius);
   cursor: pointer;
   transition: all 0.3s;
@@ -13,6 +11,16 @@
   box-shadow: var(--shadow);
   font-size: inherit;
   line-height: inherit;
+}
+
+.secondary {
+  color: var(--primary);
+  background-color: transparent;
+}
+
+.primary {
+  color: var(--background);
+  background-color: var(--primary);
 }
 
 .button:hover {
