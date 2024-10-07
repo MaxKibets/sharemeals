@@ -29,10 +29,18 @@ export const getMeals = async (): Promise<MealProps[]> => {
   return mealsDB.prepare("SELECT * FROM meals").all() as MealProps[];
 };
 
-export const getMeal = (slug: string): MealProps => {
-  return mealsDB
-    .prepare("SELECT * FROM meals WHERE slug = ?")
-    .get(slug) as MealProps;
+export const getMeal = (slug: string): MealProps | void => {
+  try {
+    return mealsDB
+      .prepare("SELECT * FROM meals WHERE slug = ?")
+      .get(slug) as MealProps;
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(`Getting meal failed! Details: ${error.message}`);
+    } else {
+      console.error("Getting meal failed! Unknown error.");
+    }
+  }
 };
 
 export const saveMeal = async (meal: SaveMealProps) => {
