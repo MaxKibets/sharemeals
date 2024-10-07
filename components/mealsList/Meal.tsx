@@ -18,7 +18,7 @@ const Meal: React.FC<MealProps> = ({
       <Card>
         <figure className={css.imageWrap}>
           <Link href={`/meals/${slug}`}>
-            <Image src={`/${image}`} alt={title} fill sizes="100%" />
+            <Image src={image} alt={title} fill sizes="100%" />
           </Link>
           <figcaption className={css.captionWrap}>
             <h2 className={css.caption}>{title}</h2>

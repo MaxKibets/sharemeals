@@ -6,7 +6,11 @@ import Image from "next/image";
 import { Button, Card } from "../ui";
 import css from "./styles/imagePicker.module.css";
 
-const ImagePicker: React.FC = () => {
+type ImagePickerProps = {
+  name: string;
+};
+
+const ImagePicker: React.FC<ImagePickerProps> = ({ name }) => {
   const inputRef = useRef<HTMLInputElement | null>(null);
 
   const [pickedImage, setPickedImage] = useState<string | ArrayBuffer | null>(
@@ -50,9 +54,9 @@ const ImagePicker: React.FC = () => {
         )}
       </Card>
       <input
-        id="imagePicker"
+        id={name}
         type="file"
-        name="imagePicker"
+        name={name}
         accept="image/png, image/jpeg"
         ref={inputRef}
         onChange={handleChange}

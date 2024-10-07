@@ -1,15 +1,25 @@
+import fs from "node:fs";
 import { StaticImageData } from "next/image";
 import db from "better-sqlite3";
+import slugify from "slugify";
+import xss from "xss";
 
-export type MealProps = {
-  id: string;
+export type BaseMealProps = {
   slug: string;
   title: string;
-  image: StaticImageData;
   summary: string;
   creator: string;
   instructions: string;
   creator_email: string;
+};
+
+export type MealProps = BaseMealProps & {
+  image: StaticImageData;
+  id: string;
+};
+
+export type SaveMealProps = BaseMealProps & {
+  image: File;
 };
 
 const mealsDB = db("meals.db");
@@ -23,4 +33,33 @@ export const getMeal = (slug: string): MealProps => {
   return mealsDB
     .prepare("SELECT * FROM meals WHERE slug = ?")
     .get(slug) as MealProps;
+};
+
+export const saveMeal = async (meal: SaveMealProps) => {
+  meal.slug = slugify(meal.title, { lower: true });
+  meal.instructions = xss(meal.instructions);
+
+  const extension = meal.image.name.split(".").pop();
+  const fileName = `${meal.slug}.${extension}`;
+
+  const stream = fs.createWriteStream(`public/images/${fileName}`);
+  const bufferdImage = await meal.image.arrayBuffer();
+
+  stream.write(Buffer.from(bufferdImage), (error) => {
+    if (error) {
+      throw new Error(`Saving image failed! Detailes: ${error.message}`);
+    }
+  });
+
+  meal.image = `/images/${fileName}`;
+
+  mealsDB
+    .prepare(
+      `
+    INSERT INTO meals 
+      (slug, title, summary, creator, instructions, creator_email, image)
+    VALUES 
+      (@slug, @title, @summary, @creator, @instructions, @creator_email, @image)`,
+    )
+    .run(meal);
 };

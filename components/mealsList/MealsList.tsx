@@ -10,7 +10,7 @@ const MealsList: React.FC = async () => {
 
   return (
     <ul className={css.meals}>
-      {meals.map((meal) => (
+      {meals.reverse().map((meal) => (
         <li key={meal.id}>
           <Meal {...meal} />
         </li>

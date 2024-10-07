@@ -1,5 +1,7 @@
 import React from "react";
 
+import { shareMeal } from "@/lib/actions";
+
 import { Button, Input, Label, Mark, Section, Textarea } from "../ui";
 import css from "./styles/sharePageContent.module.css";
 import ImagePicker from "../imagePicker/ImagePicker";
@@ -14,7 +16,7 @@ const SharePageContent: React.FC = () => {
         <p>Or any other meal you feel needs sharing!</p>
       </Section>
       <Section>
-        <form className={css.form}>
+        <form className={css.form} action={shareMeal}>
           <div className={css.row}>
             <div className={css.fieldWrap}>
               <Label htmlFor="name">Your name</Label>
@@ -42,7 +44,7 @@ const SharePageContent: React.FC = () => {
               required
             />
           </div>
-          <ImagePicker />
+          <ImagePicker name="image" />
           <div className={css.actions}>
             <Button type="submit">Share Meal</Button>
           </div>
