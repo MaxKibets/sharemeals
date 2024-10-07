@@ -22,14 +22,14 @@ export type SaveMealProps = BaseMealProps & {
   image: File;
 };
 
-const mealsDB = db("meals.db");
+const mealsDB = db("./database/meals.db");
 
 export const getMeals = async (): Promise<MealProps[]> => {
   // not async at it is... but it is a good example of how to use suspense
   return mealsDB.prepare("SELECT * FROM meals").all() as MealProps[];
 };
 
-export const getMeal = (slug: string): MealProps | void => {
+export const getMeal = async (slug: string): Promise<MealProps | void> => {
   try {
     return mealsDB
       .prepare("SELECT * FROM meals WHERE slug = ?")

@@ -11,10 +11,10 @@ type MealDetailsPageContentProps = {
   slug: string;
 };
 
-const MealDetailsPageContent: React.FC<MealDetailsPageContentProps> = ({
+const MealDetailsPageContent: React.FC<MealDetailsPageContentProps> = async ({
   slug,
 }) => {
-  const meal = getMeal(slug);
+  const meal = await getMeal(slug);
 
   if (!meal) {
     notFound();
