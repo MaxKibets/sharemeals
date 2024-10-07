@@ -10,6 +10,7 @@ type ButtonProps = {
   children: React.ReactNode;
   onClick?: () => void;
   secondary?: boolean;
+  disabled?: boolean;
 };
 
 const Button: React.FC<ButtonProps> = ({
@@ -19,6 +20,7 @@ const Button: React.FC<ButtonProps> = ({
   className,
   onClick,
   secondary,
+  disabled,
 }) => {
   const styles = `${css.button} ${className} ${secondary ? css.secondary : css.primary}`;
 
@@ -27,7 +29,12 @@ const Button: React.FC<ButtonProps> = ({
       {children}
     </Link>
   ) : (
-    <button className={styles} type={type} onClick={onClick}>
+    <button
+      className={styles}
+      type={type}
+      onClick={onClick}
+      disabled={disabled}
+    >
       {children}
     </button>
   );

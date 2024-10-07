@@ -14,7 +14,7 @@ type MealDetailsPageContentProps = {
 const MealDetailsPageContent: React.FC<MealDetailsPageContentProps> = async ({
   slug,
 }) => {
-  const meal = await getMeal(slug);
+  const meal = getMeal(slug);
 
   if (!meal) {
     notFound();

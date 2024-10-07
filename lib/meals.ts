@@ -29,7 +29,7 @@ export const getMeals = async (): Promise<MealProps[]> => {
   return mealsDB.prepare("SELECT * FROM meals").all() as MealProps[];
 };
 
-export const getMeal = async (slug: string): Promise<MealProps | void> => {
+export const getMeal = (slug: string): MealProps | void => {
   try {
     return mealsDB
       .prepare("SELECT * FROM meals WHERE slug = ?")

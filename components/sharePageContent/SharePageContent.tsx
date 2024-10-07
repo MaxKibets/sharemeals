@@ -2,9 +2,10 @@ import React from "react";
 
 import { shareMeal } from "@/lib/actions";
 
-import { Button, Input, Label, Mark, Section, Textarea } from "../ui";
+import { Input, Label, Mark, Section, Textarea } from "../ui";
 import css from "./styles/sharePageContent.module.css";
 import ImagePicker from "../imagePicker/ImagePicker";
+import SubmitAction from "./SubmitAction";
 
 const SharePageContent: React.FC = () => {
   return (
@@ -46,7 +47,7 @@ const SharePageContent: React.FC = () => {
           </div>
           <ImagePicker name="image" />
           <div className={css.actions}>
-            <Button type="submit">Share Meal</Button>
+            <SubmitAction />
           </div>
         </form>
       </Section>
