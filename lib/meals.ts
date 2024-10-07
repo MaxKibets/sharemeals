@@ -14,8 +14,8 @@ export type BaseMealProps = {
 };
 
 export type MealProps = BaseMealProps & {
-  image: StaticImageData;
   id: string;
+  image: StaticImageData;
 };
 
 export type SaveMealProps = BaseMealProps & {
@@ -51,8 +51,6 @@ export const saveMeal = async (meal: SaveMealProps) => {
     }
   });
 
-  meal.image = `/images/${fileName}`;
-
   mealsDB
     .prepare(
       `
@@ -61,5 +59,5 @@ export const saveMeal = async (meal: SaveMealProps) => {
     VALUES 
       (@slug, @title, @summary, @creator, @instructions, @creator_email, @image)`,
     )
-    .run(meal);
+    .run({ ...meal, image: `/images/${fileName}` });
 };
