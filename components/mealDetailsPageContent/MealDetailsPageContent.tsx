@@ -26,7 +26,7 @@ const MealDetailsPageContent: React.FC<MealDetailsPageContentProps> = ({
     <>
       <Section marginLg className={css.topSection}>
         <Card className={css.imageWrap}>
-          <Image src={`/images/${image}`} alt={title} fill />
+          <Image src={image} alt={title} fill />
         </Card>
         <div className={css.desctiption}>
           <h2>{title}</h2>
